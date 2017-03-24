@@ -1,0 +1,22 @@
+<ion-view>
+	<ion-content>
+	
+		<div class="ville">Météo de {{city}}</div>
+		<ion-list class="meteoSemaine">
+			<ion-item ng-repeat="day in days">
+			<div class="jours">Météo du {{day.dt*1000| date:"EEE dd MM yyyy"}}</div>
+			<img src="http://openweathermap.org/img/w/{{day.weather[0].icon}}.png">
+			<div class="temperatures">{{day.temp.day| number:0}}°C</div>
+
+			<div class="descriptions">{{day.weather[0].description}}</div>
+			</ion-item>
+		</ion-list>
+		<ion-list class="meteoJour">
+			<div class="jour">{{jour*1000| date:"EEE dd MM yyyy"}}</div>
+			<div class="temperature">{{temp}}</div>
+			<div class="description">{{description}}</div>
+		</ion-list>
+
+
+	</ion-content>
+</ion-view>

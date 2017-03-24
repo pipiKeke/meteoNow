@@ -1,0 +1,25 @@
+<ion-view view-title='home'>
+	<ion-content class="main">
+
+		<h2 class="logo">Logo météoNow</h2>
+		<div class="padding topSide">
+		<form class="formCity list list-inset">
+		  <label class="item item-input">
+		    <input type="text" placeholder="Ville" ng-model="city">
+		  </label>
+		  
+		  	<button class="buttonDay button button-block button-positive" ng-click="submitDay(city)">Jours
+		  	</button>
+		  	<button class=" buttonWeek button button-block button-positive" ng-click="submitWeek(city)">semaine</button>
+		  
+		  <button class="buttonGeo button button-block button-positive	" primary clear item-left ng-click="geolocate()">
+        
+        Geolocate
+      </button>  
+		</form>
+		</div>
+		<div class="bottomSide">
+			<button class=" button button-block button-positive">Config</button>
+		</div>
+	</ion-content>
+</ion-view>
